@@ -14,6 +14,9 @@
 ActiveRecord::Schema.define(:version => 20130314230247) do
 
   create_table "assignments", :force => true do |t|
+ActiveRecord::Schema.define(:version => 20130314221440) do
+
+  create_table "students", :force => true do |t|
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
@@ -25,4 +28,3 @@ ActiveRecord::Schema.define(:version => 20130314230247) do
     t.integer "assignment_id"
   end
 
-end
