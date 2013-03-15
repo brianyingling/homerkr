@@ -1,14 +1,13 @@
 class AssignmentsController < ApplicationController
   def index
+    @assignment = Assignment.all
   end
   def new
     @assignment = Assignment.new
   end
   def create
-
     @assignment = Assignment.create(params[:assignment])
     @assignments = Assignment.all
-
   end
   def show
   end

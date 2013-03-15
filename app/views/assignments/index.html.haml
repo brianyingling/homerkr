@@ -1,2 +1,6 @@
 = link_to "New", new_assignment_path, :remote=>true
 #assignment_form
+
+- if @assignments
+  - @assignments.each do |assignment|
+    = assignment.name
