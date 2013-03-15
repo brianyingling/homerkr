@@ -1,0 +1,13 @@
+%h3 Assignments
+%table
+  - if Assignment.present?
+    %tr
+      %td Name
+      %td Group Size
+    - Assignment.all.each do |assignment|
+      %tr
+        %td= assignment.name
+        %td= assignment.group_size
+  - else
+    %tr
+      %td No assignments present
