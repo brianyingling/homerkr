@@ -1,3 +1,7 @@
 = form_for @assignment, :remote=>true do |f|
-  = button_to_function "Cancel", 'cancel_assignment_form()'
+  = f.label             :name
+  = f.text_field        :name, :autofocus=>true
+  = f.label             :group_size
+  = f.text_field        :group_size
+  = button_to_function "Cancel", "cancel_form($('#assignment_form'))"
   = f.submit

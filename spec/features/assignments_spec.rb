@@ -18,4 +18,13 @@ describe 'GET /assignments/' do
     page.should have_button('Create Assignment')
     page.should have_button('Cancel')
   end
+  it 'creates Assignment and Group objects', :js=>true do
+    visit assignments_path
+    click_link('New')
+    fill_in('Name', :with=>'Homerkr')
+    fill_in('assignment_group_size', :with=>2)
+    click_button('Create Assignment')
+    expect(Assignment.first.name).to eq 'Homerkr'
+    expect(Group.where(:group_number).count).to eq 2
+  end
 end
