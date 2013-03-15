@@ -17,7 +17,7 @@ development:
   encoding: unicode
   database: homerkr_development
   pool: 5
-  username: jeffreyerickatz
+  username: brianyingling
   password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -43,5 +43,13 @@ test:
   encoding: unicode
   database: homerkr_test
   pool: 5
-  username: jeffreyerickatz
+  username: brianyingling
+  password:
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: homerkr_production
+  pool: 5
+  username: brianyingling
   password:
