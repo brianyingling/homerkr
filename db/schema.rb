@@ -22,9 +22,9 @@ ActiveRecord::Schema.define(:version => 20130314221440) do
     t.datetime "updated_at", :null => false
   end
 
+
   create_table "groups", :force => true do |t|
     t.integer "group_number"
     t.integer "student_id"
     t.integer "assignment_id"
   end
-
