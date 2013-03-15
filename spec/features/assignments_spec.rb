@@ -24,7 +24,7 @@ describe 'GET /assignments/' do
     fill_in('Name', :with=>'Homerkr')
     fill_in('assignment_group_size', :with=>2)
     click_button('Create Assignment')
-    expect(Assignment.first.name).to eq 'Homerkr'
-    expect(Group.where(:group_number).count).to eq 2
+    page.should_not have_button("Create Assignment")
+
   end
 end

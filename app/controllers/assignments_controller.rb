@@ -8,7 +8,7 @@ class AssignmentsController < ApplicationController
 
     @assignment = Assignment.create(params[:assignment])
     @assignments = Assignment.all
-    binding.pry
+
   end
   def show
   end
